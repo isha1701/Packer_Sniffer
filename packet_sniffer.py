@@ -10,6 +10,7 @@ def sniff(interface):
 def get_url(packet):
     return packet[http.HTTPRequest].Host + packet[http.HTTPRequest].Path
 
+#use HTTPResponse().show() to figure out which layer do you need
 
 def get_login_info(packet):
     if (packet.haslayer(scapy.Raw)):
